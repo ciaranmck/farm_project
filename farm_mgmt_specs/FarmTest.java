@@ -58,4 +58,16 @@ public class FarmTest {
     assertEquals(60, farm.shearAlpacaPen());
   }
 
+  @Test
+  public void testCanShearSheepPen() {
+    Sheep sheep_01 = new Sheep();
+    farm.addSheepToPen(sheep_01);
+
+    Sheep sheep_02 = new Sheep();
+    farm.addSheepToPen(sheep_02);
+
+    assertEquals(40, farm.shearSheepPen());
+  }
+
+
 }

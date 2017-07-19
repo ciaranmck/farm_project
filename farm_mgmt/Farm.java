@@ -48,5 +48,13 @@ public class Farm {
     return counter;
   }
 
+  public int shearSheepPen() {
+    int counter = 0;
+    for (Sheep sheep : this.sheepPen) {
+      counter += sheep.shearAnimal();
+    }
+    return counter;
+  }
+
 
 }
