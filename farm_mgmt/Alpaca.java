@@ -11,8 +11,21 @@ public class Alpaca extends Animal implements Shearable {
   }
 
   public int shearAnimal() {
-    return this.wool;
+    int shearedWool = this.wool;
+
+    if (shearedWool == this.wool) {
+      this.wool = 0;
+    }
+    return shearedWool;
   }
+
+  // public int shearAnimal(ArrayList<Alpaca> alpacas) {
+  //   counter = 0;
+  //   for (int alpaca : alpacas) {
+  //     this.wool += counter;
+  //   }
+  //   return counter;
+  // }
 
 
 }

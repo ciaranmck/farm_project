@@ -7,11 +7,11 @@ public class Sheep extends Animal implements Shearable {
 
   public Sheep() {
     super();
-     this.wool = 20;
+    this.wool = 20;
   }
 
   public int shearAnimal() {
-   return this.wool; 
+    return this.wool;
   }
 
 

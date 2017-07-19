@@ -7,11 +7,13 @@ public class Farm {
   private String name;
   private ArrayList<Sheep> sheepPen;
   private ArrayList<Alpaca> alpacaPen;
+  // private ArrayList<int> woolStock;
 
   public Farm(String name) {
     this.name = name;
     this.sheepPen = new ArrayList<Sheep>();
     this.alpacaPen = new ArrayList<Alpaca>();
+    // this.woolStock = new ArrayList<int>();
   }
 
   public String getName() {
