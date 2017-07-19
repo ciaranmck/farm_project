@@ -40,6 +40,7 @@ public class GuestTest {
     Sheep sheep = new Sheep();
 
     guest.rentAnimal(sheep);
+    
     Animal animal = guest.returnAnimal();
     farm.addAnimalToPen(animal);
 
