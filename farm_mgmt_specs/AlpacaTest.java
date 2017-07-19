@@ -23,4 +23,16 @@ public class AlpacaTest {
     assertEquals(5, alpaca.getAge());
   }
 
+  @Test 
+  public void testAlpacaHasColour() {
+    alpaca.setColour("Brown");
+    assertEquals("Brown", alpaca.getColour());
+  }
+
+  @Test
+  public void testAlpacaHasGender() {
+    alpaca.setGender("M");
+    assertEquals("M", alpaca.getGender());
+  }
+
 }

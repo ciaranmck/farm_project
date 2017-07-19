@@ -38,7 +38,7 @@ public abstract class Animal {
     this.colour = colour;
   }
 
-  public String gender() {
+  public String getGender() {
     return this.gender;
   }
 
