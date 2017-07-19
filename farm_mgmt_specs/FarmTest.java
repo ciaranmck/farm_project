@@ -28,4 +28,11 @@ public class FarmTest {
     assertEquals(0, farm.getAlpacaCount());
   }
 
+  @Test
+  public void testCanAddSheepToPen() {
+    Sheep sheep_01 = new Sheep();
+    farm.addSheepToPen(sheep_01);
+    assertEquals(1, farm.getSheepCount());
+  }
+
 }

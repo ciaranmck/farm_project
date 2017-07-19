@@ -26,5 +26,9 @@ public class Farm {
     return this.alpacaPen.size();
   }
 
+  public void addSheepToPen(Sheep sheep) {
+    this.sheepPen.add(sheep);
+  }
+
 
 }
