@@ -62,5 +62,9 @@ public class Farm {
     return counter;
   }
 
+  public void addWoolToStock(int wool) {
+    this.woolStock += wool;
+  }
+
 
 }

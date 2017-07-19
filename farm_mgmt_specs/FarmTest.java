@@ -7,10 +7,12 @@ import java.util.ArrayList;
 public class FarmTest {
 
   Farm farm;
+  Farm farmTwo;
 
   @Before
   public void before() {
     farm = new Farm("Val's Farm", 50000);
+    farmTwo = new Farm("Bob's Farm", 100000);
   }
 
   @Test
@@ -73,6 +75,32 @@ public class FarmTest {
 
     assertEquals(40, farm.shearSheepPen());
   }
+
+  @Test
+  public void testFarmCanStockpileWool() {
+    Sheep sheep_01 = new Sheep();
+    farm.addSheepToPen(sheep_01);
+
+    Alpaca alpaca_01 = new Alpaca();
+    farm.addAlpacaToPen(alpaca_01);
+
+    int shearedWool = farm.shearSheepPen() + farm.shearAlpacaPen();
+    farm.addWoolToStock(shearedWool);
+
+    assertEquals(50, farm.woolCount());
+  }
+
+  // @Test
+  // public void testFarmCanSellAnimals() {
+  //   Sheep sheep_01 = new Sheep();
+  //   farm.addSheepToPen(sheep_01);
+
+  //   Alpaca alpaca_01 = new Alpaca();
+  //   farm.addAlpacaToPen(alpaca_01);
+
+  //   assertEquals()
+
+  // }
 
 
 }
