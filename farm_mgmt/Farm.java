@@ -18,5 +18,13 @@ public class Farm {
     return this.name;
   }
 
+  public int getSheepCount() {
+    return this.sheepPen.size();
+  }
+
+  public int getAlpacaCount() {
+    return this.alpacaPen.size();
+  }
+
 
 }

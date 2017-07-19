@@ -18,4 +18,14 @@ public class FarmTest {
     assertEquals("Bob's Farm", farm.getName());
   }
 
+  @Test
+  public void testSheepPenIsEmpty() {
+    assertEquals(0, farm.getSheepCount());
+  }
+
+  @Test
+  public void testAlpacaPenIsEmpty() {
+    assertEquals(0, farm.getAlpacaCount());
+  }
+
 }
