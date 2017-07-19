@@ -40,13 +40,13 @@ public class Farm {
     return this.woolStock;
   }
 
-  // public int shearAnimal(ArrayList<Alpaca> alpacas) {
-  //   counter = 0;
-  //   for (int alpaca : alpacas) {
-  //     this.wool += counter;
-  //   }
-  //   return counter;
-  // }
+  public int shearAlpacaPen() {
+    int counter = 0;
+    for (Alpaca alpaca : this.alpacaPen) {
+      counter += alpaca.shearAnimal();
+    }
+    return counter;
+  }
 
 
 }

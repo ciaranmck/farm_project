@@ -47,4 +47,15 @@ public class FarmTest {
     assertEquals(0, farm.woolCount());
   }
 
+  @Test
+  public void testCanShearAlpacaPen() {
+    Alpaca alpaca_01 = new Alpaca();
+    farm.addAlpacaToPen(alpaca_01);
+
+    Alpaca alpaca_02 = new Alpaca();
+    farm.addAlpacaToPen(alpaca_02);
+
+    assertEquals(60, farm.shearAlpacaPen());
+  }
+
 }
