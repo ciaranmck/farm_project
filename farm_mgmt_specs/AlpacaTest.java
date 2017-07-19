@@ -35,4 +35,10 @@ public class AlpacaTest {
     assertEquals("M", alpaca.getGender());
   }
 
+  @Test 
+  public void testAlpacaHasValue() {
+    alpaca.setValue(500);
+    assertEquals(500, alpaca.getValue());
+  }
+
 }

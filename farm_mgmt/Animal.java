@@ -6,12 +6,14 @@ public abstract class Animal {
   private int age;
   private String colour;
   private String gender;
+  private int value;
 
   public Animal() {
     this.name = name;
     this.age = age;
     this.colour = colour;
     this.gender = gender;
+    this.value = value;
   }
 
   public String getName() {
@@ -44,6 +46,14 @@ public abstract class Animal {
 
   public void setGender(String gender) {
     this.gender = gender;
+  }
+
+  public int getValue() {
+    return this.value;
+  }
+
+  public void setValue(int value) {
+    this.value = value;
   }
 
 }

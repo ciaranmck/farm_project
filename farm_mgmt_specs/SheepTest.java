@@ -35,4 +35,10 @@ public void testSheepHasGender() {
   assertEquals("F", sheep.getGender());
 }
 
+@Test 
+public void testSheepHasValue() {
+  sheep.setValue(400);
+  assertEquals(400, sheep.getValue());
+}
+
 }
