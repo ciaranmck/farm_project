@@ -105,8 +105,14 @@ public class FarmTest {
 
     assertEquals(50100, farm.getBudget());
     assertEquals(30, farm.woolCount());
-
   }
 
+  @Test
+  public void testFarmCanBuyWool() {
+    farm.buyWool(20);
+
+    assertEquals(49900, farm.getBudget());
+    assertEquals(20, farm.woolCount());
+  }
 
 }
