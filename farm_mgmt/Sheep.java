@@ -14,19 +14,13 @@ public class Sheep extends Animal implements Shearable {
     return this.wool;
   }
 
-  // public int shearAnimal() {
-  //     int shearedWool = 0;
-        
-  //     this.wool += shearedWool;
-      
-  //     return shearedWool;
-  //   }
-
   public int shearAnimal() {
     int shearedWool = this.wool;
 
     if (shearedWool == this.wool) {
-      this.wool -= 20;
+      while (this.wool > 0) {
+        this.wool--;
+      }
     }
     return shearedWool;
   }
