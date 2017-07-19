@@ -10,11 +10,15 @@ public class Alpaca extends Animal implements Shearable {
     this.wool = 30;
   }
 
+  public int hasWool() {
+    return this.wool;
+  }
+
   public int shearAnimal() {
     int shearedWool = this.wool;
 
     if (shearedWool == this.wool) {
-      this.wool = 0;
+      this.wool -= 30;
     }
     return shearedWool;
   }

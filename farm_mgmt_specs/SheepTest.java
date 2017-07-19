@@ -41,4 +41,15 @@ public void testSheepHasValue() {
   assertEquals(400, sheep.getValue());
 }
 
+@Test
+public void testSheepHasWool() {
+  assertEquals(20, sheep.hasWool());
+}
+
+@Test
+public void testCanShearAnimal() {
+  assertEquals(20, sheep.shearAnimal());
+  assertEquals(0, sheep.hasWool());
+}
+
 }

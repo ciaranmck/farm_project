@@ -41,4 +41,15 @@ public class AlpacaTest {
     assertEquals(500, alpaca.getValue());
   }
 
+  @Test
+  public void testAlpacaHasWool() {
+    assertEquals(30, alpaca.hasWool());
+  }
+
+  @Test
+  public void testCanShearAnimal() {
+    assertEquals(30, alpaca.shearAnimal());
+    assertEquals(0, alpaca.hasWool());
+  }
+
 }
