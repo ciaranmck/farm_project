@@ -85,4 +85,10 @@ public class Farm {
     return sheep;
   }
 
+  public Alpaca sellAlpaca(int value) {
+    Alpaca alpaca = this.alpacaPen.remove(0);
+    this.budget += value;
+    return alpaca;
+  }
+
 }
