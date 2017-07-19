@@ -30,5 +30,9 @@ public class Farm {
     this.sheepPen.add(sheep);
   }
 
+  public void addAlpacaToPen(Alpaca alpaca) {
+    this.alpacaPen.add(alpaca);
+  }
+
 
 }
