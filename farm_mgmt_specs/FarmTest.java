@@ -141,4 +141,21 @@ public class FarmTest {
     assertEquals(0, farm.getSheepCount());
   }
 
+  @Test
+  public void testAnimalsCanBeMoved() {
+    Alpaca alpaca_01 = new Alpaca();
+    farm.addAlpacaToPen(alpaca_01);
+
+    alpaca_01.setValue(500);
+
+    Alpaca alpaca = farm.sellAlpaca(alpaca_01.getValue());
+    farmTwo.buyAlpaca(alpaca, alpaca_01.getValue());
+
+
+    assertEquals(1, farmTwo.getAlpacaCount());
+    assertEquals(0, farm.getAlpacaCount());
+    assertEquals(50500, farm.getBudget());
+    assertEquals(99500, farmTwo.getBudget());
+  }
+
 }
