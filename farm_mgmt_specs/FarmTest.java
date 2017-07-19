@@ -90,17 +90,23 @@ public class FarmTest {
     assertEquals(50, farm.woolCount());
   }
 
-  // @Test
-  // public void testFarmCanSellAnimals() {
-  //   Sheep sheep_01 = new Sheep();
-  //   farm.addSheepToPen(sheep_01);
+  @Test
+  public void testFarmCanSellWool() {
+    Sheep sheep_01 = new Sheep();
+    farm.addSheepToPen(sheep_01);
 
-  //   Alpaca alpaca_01 = new Alpaca();
-  //   farm.addAlpacaToPen(alpaca_01);
+    Alpaca alpaca_01 = new Alpaca();
+    farm.addAlpacaToPen(alpaca_01);
 
-  //   assertEquals()
+    int shearedWool = farm.shearSheepPen() + farm.shearAlpacaPen();
+    farm.addWoolToStock(shearedWool);
 
-  // }
+    farm.sellWool(20);
+
+    assertEquals(50100, farm.getBudget());
+    assertEquals(30, farm.woolCount());
+
+  }
 
 
 }

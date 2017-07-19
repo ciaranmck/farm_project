@@ -66,5 +66,10 @@ public class Farm {
     this.woolStock += wool;
   }
 
+  public void sellWool(int weight) {
+    this.woolStock -= weight;
+    int profit = weight * 5;
+    this.budget += profit;
+  }
 
 }
