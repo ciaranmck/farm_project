@@ -42,8 +42,16 @@ public class Farm {
     this.sheepPen.add(sheep);
   }
 
+  public void removeSheepFromPen() {
+    this.sheepPen.remove(0);
+  }
+
   public void addAlpacaToPen(Alpaca alpaca) {
     this.alpacaPen.add(alpaca);
+  }
+
+  public void removeAlpacaFromPen() {
+    this.alpacaPen.remove(0);
   }
 
   public int shearAlpacaPen() {

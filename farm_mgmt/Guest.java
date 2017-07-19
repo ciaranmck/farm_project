@@ -17,8 +17,17 @@ public class Guest {
     return this.name;
   }
 
+  public int checkRentals() {
+    return this.rental.size();
+  }
+
   public int getWallet() {
     return this.wallet;
+  }
+
+  public void rentAnimal(Animal animal) {
+    this.rental.add(animal);
+    wallet -= 10;
   }
 
 }

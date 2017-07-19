@@ -23,4 +23,13 @@ public class GuestTest {
     assertEquals(100, guest.getWallet());
   }
 
+  @Test
+  public void testCanRentAlpaca() {
+    Sheep sheep = new Sheep();
+
+    guest.rentAnimal(sheep);
+
+    assertEquals(1, guest.checkRentals());
+  }
+
 }
