@@ -79,4 +79,10 @@ public class Farm {
     this.budget -= cost;
   }
 
+  public Sheep sellSheep(int value) {
+    Sheep sheep = this.sheepPen.remove(0);
+    this.budget += value;
+    return sheep;
+  }
+
 }

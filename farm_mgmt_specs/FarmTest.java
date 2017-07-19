@@ -115,4 +115,17 @@ public class FarmTest {
     assertEquals(20, farm.woolCount());
   }
 
+  @Test
+  public void testCanSellSheep() {
+    Sheep sheep_01 = new Sheep();
+    farm.addSheepToPen(sheep_01);
+    
+    sheep_01.setValue(400);
+
+    farm.sellSheep(sheep_01.getValue());
+
+    assertEquals(50400, farm.getBudget());
+    assertEquals(0, farm.getSheepCount());
+  }
+
 }
