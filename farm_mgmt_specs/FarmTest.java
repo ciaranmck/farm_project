@@ -42,4 +42,9 @@ public class FarmTest {
     assertEquals(1, farm.getAlpacaCount());
   }
 
+  @Test
+  public void testFarmHasWool() {
+    assertEquals(0, farm.woolCount());
+  }
+
 }

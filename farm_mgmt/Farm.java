@@ -7,13 +7,13 @@ public class Farm {
   private String name;
   private ArrayList<Sheep> sheepPen;
   private ArrayList<Alpaca> alpacaPen;
-  // private ArrayList<int> woolStock;
+  private int woolStock;
 
   public Farm(String name) {
     this.name = name;
     this.sheepPen = new ArrayList<Sheep>();
     this.alpacaPen = new ArrayList<Alpaca>();
-    // this.woolStock = new ArrayList<int>();
+    this.woolStock = woolStock;
   }
 
   public String getName() {
@@ -35,6 +35,18 @@ public class Farm {
   public void addAlpacaToPen(Alpaca alpaca) {
     this.alpacaPen.add(alpaca);
   }
+
+  public int woolCount() {
+    return this.woolStock;
+  }
+
+  // public int shearAnimal(ArrayList<Alpaca> alpacas) {
+  //   counter = 0;
+  //   for (int alpaca : alpacas) {
+  //     this.wool += counter;
+  //   }
+  //   return counter;
+  // }
 
 
 }
