@@ -10,12 +10,12 @@ public class FarmTest {
 
   @Before
   public void before() {
-    farm = new Farm("Bob's Farm");
+    farm = new Farm("Val's Farm", 50000);
   }
 
   @Test
   public void testFarmHasName() {
-    assertEquals("Bob's Farm", farm.getName());
+    assertEquals("Val's Farm", farm.getName());
   }
 
   @Test
@@ -26,6 +26,11 @@ public class FarmTest {
   @Test
   public void testAlpacaPenIsEmpty() {
     assertEquals(0, farm.getAlpacaCount());
+  }
+
+  @Test
+  public void testFarmHasBudget() {
+    assertEquals(50000, farm.getBudget());
   }
 
   @Test
