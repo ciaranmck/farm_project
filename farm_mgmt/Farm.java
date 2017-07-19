@@ -7,6 +7,7 @@ public class Farm {
   private String name;
   private ArrayList<Sheep> sheepPen;
   private ArrayList<Alpaca> alpacaPen;
+  private ArrayList<Animal> sortingPen;
   private int woolStock;
   private int budget;
 
@@ -14,6 +15,7 @@ public class Farm {
     this.name = name;
     this.sheepPen = new ArrayList<Sheep>();
     this.alpacaPen = new ArrayList<Alpaca>();
+    this.sortingPen = new ArrayList<Animal>();
     this.woolStock = woolStock;
     this.budget = budget;
   }
@@ -28,6 +30,10 @@ public class Farm {
 
   public int getAlpacaCount() {
     return this.alpacaPen.size();
+  }
+
+  public int getSortingPenCount() {
+    return this.sortingPen.size();
   }
 
   public int woolCount() {
@@ -52,6 +58,14 @@ public class Farm {
 
   public void removeAlpacaFromPen() {
     this.alpacaPen.remove(0);
+  }
+
+  public void addAnimalToPen(Animal animal) {
+    this.sortingPen.add(animal);
+  }
+
+  public void removeAnimalFromPen() {
+    this.sortingPen.remove(0);
   }
 
   public int shearAlpacaPen() {

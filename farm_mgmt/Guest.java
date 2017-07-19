@@ -30,4 +30,10 @@ public class Guest {
     wallet -= 10;
   }
 
+  public Animal returnAnimal() {
+    Animal animal = this.rental.remove(0);
+    return animal;
+  }
+
+
 }
