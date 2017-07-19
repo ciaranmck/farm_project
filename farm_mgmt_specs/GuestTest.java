@@ -30,6 +30,7 @@ public class GuestTest {
     guest.rentAnimal(sheep);
 
     assertEquals(1, guest.checkRentals());
+    assertEquals(90, guest.getWallet());
   }
 
 }
