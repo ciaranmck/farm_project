@@ -142,7 +142,7 @@ public class FarmTest {
   }
 
   @Test
-  public void testAnimalsCanBeMoved() {
+  public void testAlpacasCanBeMoved() {
     Alpaca alpaca_01 = new Alpaca();
     farm.addAlpacaToPen(alpaca_01);
 
@@ -156,6 +156,22 @@ public class FarmTest {
     assertEquals(0, farm.getAlpacaCount());
     assertEquals(50500, farm.getBudget());
     assertEquals(99500, farmTwo.getBudget());
+  }
+
+  @Test
+  public void testSheepCanBeMoved() {
+    Sheep sheep_01 = new Sheep();
+    farm.addSheepToPen(sheep_01);
+    
+    sheep_01.setValue(400);
+
+    Sheep sheep = farm.sellSheep(sheep_01.getValue());
+    farmTwo.buySheep(sheep, sheep_01.getValue());
+
+    assertEquals(1, farmTwo.getSheepCount());
+    assertEquals(0, farm.getSheepCount());
+    assertEquals(50400, farm.getBudget());
+    assertEquals(99600, farmTwo.getBudget());
   }
 
 }

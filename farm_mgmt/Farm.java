@@ -91,6 +91,11 @@ public class Farm {
     return alpaca;
   }
 
+  public void buySheep(Sheep sheep, int value) {
+    this.sheepPen.add(sheep);
+    this.budget -= value;
+  }
+
   public void buyAlpaca(Alpaca alpaca, int value) {
     this.alpacaPen.add(alpaca);
     this.budget -= value;
