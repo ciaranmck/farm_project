@@ -1,17 +1,22 @@
 package farm_mgmt;
+import java.util.ArrayList;
+
 
 public class Farm {
 
   private String name;
-  private Arraylist<Sheep> sheepPen;
-  private Arraylist<Alpaca> alpacaPen;
+  private ArrayList<Sheep> sheepPen;
+  private ArrayList<Alpaca> alpacaPen;
 
-  public Farm() {
+  public Farm(String name) {
     this.name = name;
-    this.sheepPen = new Arraylist<Sheep>();
-    this.alpacaPen = new Arraylist<Alpaca>();
+    this.sheepPen = new ArrayList<Sheep>();
+    this.alpacaPen = new ArrayList<Alpaca>();
   }
 
-  
+  public String getName() {
+    return this.name;
+  }
+
 
 }
